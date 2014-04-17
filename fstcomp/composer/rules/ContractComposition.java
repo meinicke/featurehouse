@@ -377,7 +377,6 @@ public class ContractComposition extends AbstractCompositionRule {
 			baseCases[caseId] = baseCase;
 		}
 
-		System.out.println("baseCases(id)= " + baseCases[caseId]);
 		Pattern p = Pattern
 				.compile(
 						".*\\(\\\\(forall|exists|max|min|num_of|product|sum).*(;).*(;).*\\).*",
@@ -391,7 +390,6 @@ public class ContractComposition extends AbstractCompositionRule {
 				sb.setCharAt(m.start(i), '#');
 				baseCases[caseId] = sb.toString();
 			}
-			System.out.println("XX " + baseCases[caseId]);
 		}
 		String[] clausesA = baseCases[caseId].trim().split(";");
 
